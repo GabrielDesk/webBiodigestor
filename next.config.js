@@ -4,7 +4,19 @@ const nextConfig = {
   swcMinify: true,
   compiler: {
     styledComponents: true
-  }
+  },
+  images: {
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'example.com',
+          port: '',
+          pathname: '/account123/**',
+        },
+      ],
+      dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    },
   
 }
 
