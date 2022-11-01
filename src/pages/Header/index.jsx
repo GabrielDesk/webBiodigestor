@@ -1,16 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { MontserratFont } from "../constants/fontFamily";
 import Script from "next/script";
-
-// import { COLORS } from "../constants/bsColors";
 
 import { motion } from "framer-motion";
 import FirstAndSecond from "../../components/FirstAndSecond";
 import SocialMediaImage from "../../images/HomePage/3dsocialmedia.png";
-import { COLORS } from "../constants/bsColors";
 import { AwesomeButton } from "react-awesome-button";
-// import AwesomeButtonStyles from "react-awesome-button/src/styles/styles.scss";
 
 const Header = () => {
   return (
