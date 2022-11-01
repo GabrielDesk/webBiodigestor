@@ -94,8 +94,9 @@ const Header = () => {
                     Descubra aqui a origem do <u>biodigestor</u>.
                   </h1>
                   <p className="lead fw-normal text-muted mb-5">
-                    Quem construiu, qual foi a necessidade, o porque ele é tão
-                    benefico a nossa sociedade? Essas são perguntas
+                    Quem construiu, qual foi a necessidade e porque ele é tão
+                    benéfico a nossa sociedade? Essas são perguntas que
+                    sanaremos logo abaixo :)
                   </p>
                   <div className="d-flex flex-column flex-lg-row align-items-center">
                     <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
