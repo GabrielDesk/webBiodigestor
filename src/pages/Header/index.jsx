@@ -93,21 +93,26 @@ const Header = () => {
                     benéfico a nossa sociedade? Essas são perguntas que
                     sanaremos logo abaixo :)
                   </p>
-                  <div className="d-flex flex-column flex-lg-row align-items-center">
+                  <div
+                    className="d-flex flex-column flex-lg-row align-items-center"
+                    style={{
+                      paddingTop: "10%",
+                    }}
+                  >
                     <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
                       <Image
-                        height={400}
-                        width={400}
-                        className="app-badge"
+                        height={300}
+                        width={300}
+                        // className="app-badge"
                         src="/assets/img/google-play-BADGE.svg"
                         alt="..."
                       />
                     </a>
                     <a href="#!">
                       <Image
-                        height={400}
-                        width={400}
-                        className="app-badge"
+                        height={300}
+                        width={300}
+                        // className="app-badge"
                         src="/assets/img/app-store-badge.svg"
                         alt="..."
                       />
@@ -210,11 +215,10 @@ const Header = () => {
                   wrapped up in a single app!
                 </div>
                 <Image
-                  height={400}
-                  width={400}
+                  height={100}
+                  width={100}
                   src="/assets/img/tnw-logo.svg"
                   alt="..."
-                  style="height: 3rem"
                 />
               </div>
             </div>
@@ -379,11 +383,11 @@ const Header = () => {
               <div className="col-sm-8 col-md-6">
                 <div className="px-5 px-sm-0">
                   <Image
-                    height={400}
-                    width={400}
-                    className="img-fluid rounded-circle"
+                    height={300}
+                    width={300}
+                    className="img-fluid"
                     src="/assets/img/google-play-badge.svg"
-                    alt="..."
+                    alt="mao"
                   />
                 </div>
               </div>
@@ -417,18 +421,18 @@ const Header = () => {
             <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center">
               <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
                 <Image
-                  height={400}
-                  width={400}
-                  className="app-badge"
+                  height={300}
+                  width={300}
+                  // className="app-badge"
                   src="/assets/img/google-play-badge.svg"
                   alt="..."
                 />
               </a>
               <a href="#!">
                 <Image
-                  height={400}
-                  width={400}
-                  className="app-badge"
+                  height={300}
+                  width={300}
+                  // className="app-badge"
                   src="/assets/img/app-store-badge.svg"
                   alt="..."
                 />

@@ -680,6 +680,13 @@ progress {
   margin-left: auto;
 }
 
+@media (min-width: 320px) {
+  .container-sm,
+  .container {
+    max-width: 540px;
+  }
+}
+
 @media (min-width: 576px) {
   .container-sm,
   .container {
@@ -8318,9 +8325,9 @@ fieldset:disabled .btn {
   border-radius: 0.3rem !important;
 }
 
-.rounded-circle {
+/* .rounded-circle {
   border-radius: 50% !important;
-}
+} */
 
 .rounded-pill {
   border-radius: 50rem !important;
@@ -11698,9 +11705,9 @@ section {
   padding-bottom: 5rem;
 }
 
-.app-badge {
+/* .app-badge {
   height: 3rem;
-}
+} */
 
 #mainNav {
   padding-top: 1rem;
