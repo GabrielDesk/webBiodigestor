@@ -104,7 +104,7 @@ const Header = () => {
                         height={300}
                         width={300}
                         // className="app-badge"
-                        src="/assets/img/google-play-BADGE.svg"
+                        src="/assets/img/google-play-badge.svg"
                         alt="..."
                       />
                     </a>
