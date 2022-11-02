@@ -109,9 +109,9 @@ const Header = () => {
             >
               <Grid item>
                 <Typography
-                  // variant="h1"
+                  variant="h1"
                   className="display-1 lh-1 mb-3"
-                  style={{ fontWeight: "bold", lineHeight: 2 }}
+                  style={{ fontWeight: "bold" }}
                 >
                   Bioenergia, <br /> A energia que nos move!
                 </Typography>
