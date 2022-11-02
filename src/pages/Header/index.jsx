@@ -1,26 +1,42 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next/image";
 import Script from "next/script";
+
+import { Grid, Typography, Unstable_Grid2 } from "@mui/material";
+import Lottie from "react-lottie";
+import animationData from "../../../public/assets/lotties/saveEnergyPlug.json";
 
 import { motion } from "framer-motion";
 import FirstAndSecond from "../../components/FirstAndSecond";
 import SocialMediaImage from "../../images/HomePage/3dsocialmedia.png";
 import { AwesomeButton } from "react-awesome-button";
+import zIndex from "@mui/material/styles/zIndex";
+import { Box, height, width } from "@mui/system";
+import { blue } from "@mui/material/colors";
 
 const Header = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   return (
     <>
       {/* <!-- Bootstrap core JS--> */}
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" />
       {/* <!-- Core theme JS--> */}
       <Script src="js/scripts.js" />
-      {/* <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *--> */}
+      {/* {/* <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *--> */}
       {/* <!-- * *                               SB Forms JS                               * *--> */}
       {/* <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *--> */}
       {/* <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *--> */}
       <Script src="https://cdn.startbootstrap.com/sb-forms-latest.js" />
 
-      <div id="page-top">
+      <Grid id="page-top">
         {/* <!-- Navigation--> */}
         <nav
           className="navbar navbar-expand-lg navbar-light fixed-top shadow-sm"
@@ -32,7 +48,7 @@ const Header = () => {
               href="#page-top"
               style={{ fontSize: 25 }}
             >
-              BIODIGESTOR
+              Univap⚡
             </a>
             <button
               className="navbar-toggler"
@@ -73,138 +89,63 @@ const Header = () => {
           </div>
         </nav>
         {/* <!-- Mashead header--> */}
-        <header className="masthead">
-          <div className="container px-5">
-            <div className="row gx-5 align-items-center">
-              <div className="col-lg-6">
-                {/* <!-- Mashead text and app badges--> */}
-                <div
-                  className="mb-5 mb-lg-0 text-center text-lg-start"
-                  style={{ marginBottom: "50%" }}
+        <Box
+          sx={{
+            padding: "5%",
+            marginTop: 10,
+            alignItems: "center",
+          }}
+          container
+        >
+          <Grid container spacing={2}>
+            {/* gridTexts */}
+            <Grid
+              item
+              container
+              md={6}
+              sm={12}
+              lg={6}
+              style={{ alignItems: "center" }}
+            >
+              <Grid item>
+                <Typography
+                  // variant="h1"
+                  className="display-1 lh-1 mb-3"
+                  style={{ fontWeight: "bold", lineHeight: 2 }}
                 >
-                  <h1
-                    className="display-1 lh-1 mb-3"
-                    style={{ fontWeight: "bold" }}
-                  >
-                    Descubra aqui a origem do <u>biodigestor</u>.
-                  </h1>
-                  <p className="lead fw-normal text-muted mb-5">
-                    Quem construiu, qual foi a necessidade e porque ele é tão
-                    benéfico a nossa sociedade? Essas são perguntas que
-                    sanaremos logo abaixo :)
-                  </p>
-                  <div
-                    className="d-flex flex-column flex-lg-row align-items-center"
-                    style={{
-                      paddingTop: "10%",
-                    }}
-                  >
-                    <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
-                      <Image
-                        height={300}
-                        width={300}
-                        // className="app-badge"
-                        src="/assets/img/google-play-badge.svg"
-                        alt="..."
-                      />
-                    </a>
-                    <a href="#!">
-                      <Image
-                        height={300}
-                        width={300}
-                        // className="app-badge"
-                        src="/assets/img/app-store-badge.svg"
-                        alt="..."
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6">
-                {/* <!-- Masthead device mockup feature--> */}
-                <div className="masthead-device-mockup">
-                  <svg
-                    className="circle"
-                    viewBox="0 0 100 100"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <defs>
-                      <linearGradient
-                        id="circleGradient"
-                        gradientTransform="rotate(45)"
-                      >
-                        <stop
-                          className="gradient-start-color"
-                          offset="0%"
-                        ></stop>
-                        <stop
-                          className="gradient-end-color"
-                          offset="100%"
-                        ></stop>
-                      </linearGradient>
-                    </defs>
-                    <circle cx="50" cy="50" r="50"></circle>
-                  </svg>
-                  <svg
-                    className="shape-1 d-none d-sm-block"
-                    viewBox="0 0 240.83 240.83"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      x="-32.54"
-                      y="78.39"
-                      width="305.92"
-                      height="84.05"
-                      rx="42.03"
-                      transform="translate(120.42 -49.88) rotate(45)"
-                    ></rect>
-                    <rect
-                      x="-32.54"
-                      y="78.39"
-                      width="305.92"
-                      height="84.05"
-                      rx="42.03"
-                      transform="translate(-49.88 120.42) rotate(-45)"
-                    ></rect>
-                  </svg>
-                  <svg
-                    className="shape-2 d-none d-sm-block"
-                    viewBox="0 0 100 100"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="50" cy="50" r="50"></circle>
-                  </svg>
-                  <div className="device-wrapper">
-                    <div
-                      className="device"
-                      data-device="iPhoneX"
-                      data-orientation="portrait"
-                      data-color="black"
-                    >
-                      <div className="screen bg-black">
-                        {/* <!-- PUT CONTENTS HERE:--> */}
-                        {/* <!-- * * This can be a video, image, or just about anything else.--> */}
-                        {/* <!-- * * Set the max width of your media to 100% and the height to--> */}
-                        {/* <!-- * * 100% like the demo example below.--> */}
-                        <video
-                          muted="muted"
-                          autoplay=""
-                          loop=""
-                          style={{ maxWidth: "100%", height: "100%" }}
-                        >
-                          <source
-                            src="/assets/img/demo-screen.mp4"
-                            type="video/mp4"
-                          />
-                        </video>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
+                  Bioenergia, <br /> A energia que nos move!
+                </Typography>
+
+                <Typography className="lead fw-normal text-muted mb-5">
+                  Quem construiu, qual foi a sua necessidade e porque ele é tão
+                  benéfico a nossa sociedade? Essas são perguntas que sanaremos
+                  logo abaixo :)
+                </Typography>
+              </Grid>
+            </Grid>
+
+            {/* gridimage */}
+            <Grid
+              container
+              md={6}
+              sm={12}
+              lg={6}
+              style={{
+                justifyContent: "center",
+              }}
+            >
+              <img
+                style={{
+                  alignSelf: "center",
+                  height: "100%",
+                  width: "100%",
+                }}
+                src="/assets/img/homePageFirstPart.png"
+                alt="..."
+              />
+            </Grid>
+          </Grid>
+        </Box>
         {/* <!-- Quote/testimonial aside--> */}
         <aside className="text-center bg-gradient-primary-to-secondary">
           <div className="container px-5">
@@ -215,9 +156,10 @@ const Header = () => {
                   wrapped up in a single app!
                 </div>
                 <Image
+                  style={{ paddingTop: 10 }}
                   height={100}
-                  width={100}
-                  src="/assets/img/tnw-logo.svg"
+                  width={200}
+                  src="/assets/img/UnivapTransparentLogo.jpg"
                   alt="..."
                 />
               </div>
@@ -382,6 +324,7 @@ const Header = () => {
               </div>
               <div className="col-sm-8 col-md-6">
                 <div className="px-5 px-sm-0">
+                  <Lottie options={defaultOptions} height={400} width={400} />
                   <Image
                     height={300}
                     width={300}
@@ -603,17 +546,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-
-        {/* <!-- Bootstrap core JS-->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-            {/* <!-- Core theme JS--> */}
-        {/* <script src="js/scripts.js"></script> */}
-        {/* <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *--> */}
-        {/* <!-- * *                               SB Forms JS                               * *--> */}
-        {/* <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *--> */}
-        {/* <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *--> */}
-        {/* <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> */}
-      </div>
+      </Grid>
     </>
   );
 };
