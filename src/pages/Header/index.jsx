@@ -324,7 +324,7 @@ const Header = () => {
               </div>
               <div className="col-sm-8 col-md-6">
                 <div className="px-5 px-sm-0">
-                  <Lottie options={defaultOptions} height={400} width={400} />
+                  <Lottie options={defaultOptions} height={200} width={200} />
                   <Image
                     height={300}
                     width={300}
