@@ -107,31 +107,29 @@ const Header = () => {
           }}
           container
         >
-          <Grid container spacing={2}>
+          <Grid container sm={12} md={12} lg={12}>
             {/* gridTexts */}
             <Grid
-              item
               container
-              md={6}
               sm={12}
+              md={6}
               lg={6}
-              style={{ alignItems: "center" }}
+              style={{ justifyContent: "center", alignItems: "center" }}
             >
-              <Grid item>
-                <Typography
-                  variant="h1"
-                  className="display-1 lh-1 mb-3"
-                  style={{ fontWeight: "bold" }}
-                >
-                  Bioenergia! <br /> A energia que move o mundo!📡🌎
-                </Typography>
+              {/* <Grid container sm={12} md={12} lg={12}> */}
+              <Typography
+                variant="h1"
+                className="display-1 lh-1 mb-3"
+                style={{ fontWeight: "bold" }}
+              >
+                Bioenergia! <br /> A energia que move o mundo!📡🌎
+              </Typography>
 
-                <Typography className="lead fw-normal text-muted mb-5">
-                  Quem construiu, qual foi a sua necessidade e porque ele é tão
-                  benéfico a nossa sociedade? Essas são perguntas que sanaremos
-                  logo abaixo :)
-                </Typography>
-              </Grid>
+              <Typography className="lead fw-normal text-muted mb-5">
+                Quem construiu, qual foi a sua necessidade e porque ele é tão
+                benéfico a nossa sociedade? Essas são perguntas que sanaremos
+                logo abaixo :)
+              </Typography>
             </Grid>
 
             {/* gridimage */}
