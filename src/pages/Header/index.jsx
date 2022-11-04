@@ -121,6 +121,7 @@ const Header = () => {
               style={{
                 fontFamily: MontserratFam,
                 fontWeight: "700",
+                color: "#2937f0",
                 // fontSize: 74,
               }}
             >

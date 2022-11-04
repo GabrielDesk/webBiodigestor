@@ -12,6 +12,7 @@ const InformationCard = ({ Title = "", Subtitle = "" }) => {
       <div
         style={{
           maxWidth: "100vw",
+          maxHeight: "50vh",
           boxShadow: "2px 4px 9px #FFCFDF",
           borderRadius: 10,
           padding: "5%",
@@ -63,7 +64,14 @@ const InformationCard = ({ Title = "", Subtitle = "" }) => {
             paddingTop: "5%",
           }}
         >
-          <p style={{ color: "#91878f" }}>{Subtitle}</p>
+          <p
+            style={{
+              fontSize: 16,
+              color: "#91878f",
+            }}
+          >
+            {Subtitle}
+          </p>
         </div>
       </div>{" "}
     </>
