@@ -8,7 +8,7 @@ import { Montserrat } from "@next/font/google";
 import { Grid, Typography, Unstable_Grid2 } from "@mui/material";
 import Lottie from "react-lottie";
 import animationData from "../../../public/assets/lotties/saveEnergyPlug.json";
-import animationDataCleanCity from "../../../public/assets/lotties/cleanCity.json";
+import animationDataGreenEnergy from "../../../public/assets/lotties/greenEnergy.json";
 import InformationCard from "../../../public/components/InformationCard";
 
 import { motion } from "framer-motion";
@@ -33,11 +33,12 @@ const Header = () => {
   const defaultOptionsCleanCity = {
     loop: true,
     autoplay: true,
-    animationData: animationDataCleanCity,
+    animationData: animationDataGreenEnergy,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
   return (
     <>
       {/* <!-- Bootstrap core JS--> */}
@@ -110,7 +111,7 @@ const Header = () => {
           md={12}
           lg={12}
           padding={"5%"}
-          style={{ marginTop: 110, marginBottom: 60 }}
+          style={{ marginTop: 110, marginBottom: 30 }}
         >
           {/* gridTexts */}
 
@@ -136,7 +137,7 @@ const Header = () => {
                   fontFamily: MontserratFam,
                   fontWeight: 500,
                   fontSize: 16,
-                  color: "#C4BDB7",
+                  color: "#91878f",
                 }}
                 // className="lead fw-normal text-muted mb-5"
               >
@@ -175,8 +176,8 @@ const Header = () => {
             <div className="row gx-5 justify-content-center">
               <div className="col-xl-8">
                 <div className="h2 fs-1 text-white mb-4">
-                  An intuitive solution to a common problem that we all face,
-                  wrapped up in a single app!
+                  Conceito: energia renovável que é obtida do processamento de
+                  matéria formada por um processo mecânico ou biológico.
                 </div>
                 <Image
                   style={{ paddingTop: 10 }}
@@ -191,133 +192,78 @@ const Header = () => {
         </aside>
 
         {/* <!-- App features section--> */}
-        <Grid sm={12} md={12} lg={12} container>
-          <Grid sm={12} md={4} lg={4} container>
-            <Lottie
-              options={defaultOptionsCleanCity}
-              height={"100%"}
-              width={"100%"}
-            />
-          </Grid>
-
-          <Grid sm={12} md={4} lg={2} container px={2}>
-            <div
-              style={{
-                width: "100%",
-                boxShadow: "2px 4px 9px #FFCFDF",
-                borderRadius: 10,
-                margin: "5% 2% 5% 0",
-              }}
+        <Grid sm={12} md={12} lg={12} container style={{ padding: "3%" }}>
+          <Grid container sm={12} md={6} lg={6} columns={2}>
+            <Grid
+              sm={12}
+              md={6}
+              lg={6}
+              container
+              alignItems={"center"}
+              justifyContent={"center"}
             >
-              <Typography style={{ fontWeight: "bold" }}>
-                Device Modal
-              </Typography>
-              <div
-                style={{
-                  marginTop: 15,
-                  height: 0.2,
-                  backgroundColor: "#C4BDB7",
-                  opacity: 0.4,
-                  marginVertical: "3%",
-                }}
+              <Lottie
+                options={defaultOptionsCleanCity}
+                height={"20rem"}
+                width={"20rem"}
               />
-              <Typography>
-                This section is perfect for featuring some information about
-                your application, why it was built, the problem it solves, or
-                anything else! Theres plenty of space for text here, so dont
-                worry about writing too much.
-              </Typography>
-            </div>
-          </Grid>
+            </Grid>
 
-          <Grid sm={12} md={4} lg={2} container px={2}>
-            <div
-              style={{
-                width: "100%",
-                boxShadow: "2px 4px 9px #FFCFDF",
-                borderRadius: 10,
-                margin: "5% 2% 5% 0",
-              }}
+            {/* Components */}
+            <Grid
+              sm={12}
+              md={6}
+              lg={6}
+              container
+              alignItems={"center"}
+              justifyContent={"center"}
             >
-              <Typography style={{ fontWeight: "bold" }}>
-                Device Modal
-              </Typography>
-              <div
-                style={{
-                  marginTop: 15,
-                  height: 0.2,
-                  backgroundColor: "#C4BDB7",
-                  opacity: 0.4,
-                  marginVertical: "3%",
-                }}
-              />
-              <Typography>
-                This section is perfect for featuring some information about
-                your application, why it was built, the problem it solves, or
-                anything else! Theres plenty of space for text here, so dont
-                worry about writing too much.
-              </Typography>
-            </div>
-          </Grid>
+              {/* coluna1 */}
+              <Grid sm={12} md={6} lg={6} container style={{}}>
+                <Grid sm={12} container px={2}>
+                  <InformationCard
+                    Title={"Device Modal"}
+                    Subtitle="This section is perfect for featuring some information about your
+            application, why it was built, the problem it solves, or anything
+            else! Theres plenty of space for text here, so dont worry about
+            writing too much."
+                  />
+                </Grid>
 
-          <Grid sm={12} md={4} lg={2} container px={2}>
-            <div
-              style={{
-                width: "100%",
-                boxShadow: "2px 4px 9px #FFCFDF",
-                borderRadius: 10,
-                margin: "5% 2% 5% 0",
-              }}
-            >
-              <Typography style={{ fontWeight: "bold" }}>
-                Device Modal
-              </Typography>
-              <div
-                style={{
-                  marginTop: 15,
-                  height: 0.2,
-                  backgroundColor: "#C4BDB7",
-                  opacity: 0.4,
-                  marginVertical: "3%",
-                }}
-              />
-              <Typography>
-                This section is perfect for featuring some information about
-                your application, why it was built, the problem it solves, or
-                anything else! Theres plenty of space for text here, so dont
-                worry about writing too much.
-              </Typography>
-            </div>
-          </Grid>
+                <Grid sm={12} container px={2}>
+                  <InformationCard
+                    Title={"Device Modal"}
+                    Subtitle="This section is perfect for featuring some information about your
+            application, why it was built, the problem it solves, or anything
+            else! Theres plenty of space for text here, so dont worry about
+            writing too much."
+                  />
+                </Grid>
+              </Grid>
 
-          <Grid sm={12} md={4} lg={2} px={2} container>
-            <div
-              style={{
-                width: "100%",
-                boxShadow: "2px 4px 9px #FFCFDF",
-                borderRadius: 10,
-                margin: "5% 2% 5% 0",
-              }}
-            >
-              <Typography style={{ fontWeight: "bold" }}>
-                Device Modal
-              </Typography>
-              <div
-                style={{
-                  marginTop: 15,
-                  height: 0.2,
-                  backgroundColor: "#C4BDB7",
-                  opacity: 0.4,
-                  marginVertical: "3%",
-                }}
-              />
-              <Typography>
-                This section is perfect for featuring some information about
-                your application, why it was built, the problem it solves, or
-                anything else! Theres plenty of space for text here, so dont
-                worry about writing too much.
-              </Typography>
-            </div>
+              {/* coluna2 */}
+              <Grid sm={12} md={6} lg={6} container style={{}}>
+                <Grid sm={12} container px={2}>
+                  <InformationCard
+                    Title={"Device Modal"}
+                    Subtitle="This section is perfect for featuring some information about your
+            application, why it was built, the problem it solves, or anything
+            else! Theres plenty of space for text here, so dont worry about
+            writing too much."
+                  />
+                </Grid>
+
+                <Grid sm={12} container px={2}>
+                  <InformationCard
+                    Title={"Device Modal"}
+                    Subtitle="This section is perfect for featuring some information about your
+            application, why it was built, the problem it solves, or anything
+            else! Theres plenty of space for text here, so dont worry about
+            writing too much."
+                  />
+                </Grid>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
 
