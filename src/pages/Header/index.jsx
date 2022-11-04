@@ -3,6 +3,8 @@ import React from "react";
 import Image from "next/image";
 import Script from "next/script";
 
+import { Montserrat } from "@next/font/google";
+
 import { Grid, Typography, Unstable_Grid2 } from "@mui/material";
 import Lottie from "react-lottie";
 import animationData from "../../../public/assets/lotties/saveEnergyPlug.json";
@@ -16,6 +18,8 @@ import { AwesomeButton } from "react-awesome-button";
 import zIndex from "@mui/material/styles/zIndex";
 import { Box, height, width } from "@mui/system";
 import { blue } from "@mui/material/colors";
+
+const MontserratFam = Montserrat();
 
 const Header = () => {
   const defaultOptions = {
@@ -99,61 +103,72 @@ const Header = () => {
           </div>
         </nav>
         {/* <!-- Mashead header--> */}
-        <Box
-          sx={{
-            padding: "5%",
-            marginTop: 10,
-            alignItems: "center",
-          }}
-          container
-        >
-          <Grid container sm={12} md={12} lg={12}>
-            {/* gridTexts */}
-            <Grid
-              container
-              sm={12}
-              md={6}
-              lg={6}
-              style={{ justifyContent: "center", alignItems: "center" }}
-            >
-              {/* <Grid container sm={12} md={12} lg={12}> */}
-              <Typography
-                variant="h1"
-                className="display-1 lh-1 mb-3"
-                style={{ fontWeight: "bold" }}
-              >
-                Bioenergia! <br /> A energia que move o mundo!📡🌎
-              </Typography>
 
-              <Typography className="lead fw-normal text-muted mb-5">
+        <Grid
+          container
+          sm={12}
+          md={12}
+          lg={12}
+          padding={"5%"}
+          style={{ marginTop: 110, marginBottom: 60 }}
+        >
+          {/* gridTexts */}
+
+          <Grid container sm={12} md={6} lg={6}>
+            <h1
+              // variant={"h1"}
+              style={{
+                fontFamily: MontserratFam,
+                fontWeight: "700",
+                // fontSize: 74,
+              }}
+            >
+              Bioenergia.
+              <br />
+              A energia que move o mundo!
+              <br />
+              📡🌎
+            </h1>
+
+            <div style={{ marginTop: 2 }}>
+              <p
+                style={{
+                  fontFamily: MontserratFam,
+                  fontWeight: 500,
+                  fontSize: 16,
+                  color: "#C4BDB7",
+                }}
+                // className="lead fw-normal text-muted mb-5"
+              >
                 Quem construiu, qual foi a sua necessidade e porque ele é tão
                 benéfico a nossa sociedade? Essas são perguntas que sanaremos
                 logo abaixo :)
-              </Typography>
-            </Grid>
-
-            {/* gridimage */}
-            <Grid
-              container
-              md={6}
-              sm={12}
-              lg={6}
-              style={{
-                justifyContent: "center",
-              }}
-            >
-              <img
-                style={{
-                  alignSelf: "center",
-                  height: "100%",
-                  width: "100%",
-                }}
-                src="/assets/img/homePageFirstPart.png"
-                alt="..."
-              />
-            </Grid>
+              </p>
+            </div>
           </Grid>
-        </Box>
+
+          {/* gridimage */}
+          <Grid
+            container
+            sm={12}
+            md={6}
+            lg={6}
+            style={{
+              justifyContent: "center",
+            }}
+          >
+            <img
+              style={{
+                alignSelf: "center",
+                height: "100%",
+                width: "100%",
+              }}
+              src="/assets/img/homePageFirstPart.png"
+              alt="..."
+            />
+          </Grid>
+        </Grid>
+
         {/* <!-- Quote/testimonial aside--> */}
         <aside className="text-center bg-gradient-primary-to-secondary">
           <div className="container px-5">
@@ -323,14 +338,14 @@ const Header = () => {
               </div>
               <div className="col-sm-8 col-md-6">
                 <div className="px-5 px-sm-0">
-                  <Lottie options={defaultOptions} height={200} width={200} />
-                  <Image
+                  {/* <Lottie options={defaultOptions} height={200} width={200} /> */}
+                  {/* <Image
                     height={300}
                     width={300}
                     className="img-fluid"
                     src="/assets/img/google-play-badge.svg"
                     alt="mao"
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
@@ -362,22 +377,22 @@ const Header = () => {
             </h2>
             <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center">
               <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
-                <Image
+                {/* <Image
                   height={300}
                   width={300}
                   // className="app-badge"
                   src="/assets/img/google-play-badge.svg"
                   alt="..."
-                />
+                /> */}
               </a>
               <a href="#!">
-                <Image
+                {/* <Image
                   height={300}
                   width={300}
                   // className="app-badge"
                   src="/assets/img/app-store-badge.svg"
                   alt="..."
-                />
+                /> */}
               </a>
             </div>
           </div>
