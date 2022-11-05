@@ -2,6 +2,11 @@ import Head from 'next/head';
 import Header from './Header';
 import '../../styles/globals.css';
 import 'react-awesome-button/src/styles/styles.scss';
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+config.autoAddCss = false
+
 function MyApp({ Component, pageProps }) {
   return (
     <>

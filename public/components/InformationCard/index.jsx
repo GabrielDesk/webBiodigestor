@@ -1,18 +1,20 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+
 import { motion, AnimatePresence } from "framer-motion";
 
-const InformationCard = ({ Title = "", Subtitle = "" }) => {
+const InformationCard = ({ Item = {} }) => {
   const [selectedId, setSelectedId] = useState(null);
   const subtitle = "Ola meu bem!";
   const title = "Ola meu bem!";
-  const id = 1;
 
   return (
     <>
       <div
         style={{
           maxWidth: "100vw",
-          maxHeight: "50vh",
+          maxHeight: "80vh",
           boxShadow: "2px 4px 9px #FFCFDF",
           borderRadius: 10,
           padding: "5%",
@@ -21,57 +23,77 @@ const InformationCard = ({ Title = "", Subtitle = "" }) => {
       >
         <div
           style={{
-            display: "flex",
-            width: "100%",
-            flexDirection: "row",
-            paddingTop: "2%",
-            // backgroundColor: "black",
-            // alignItems: "center",
-            justifyContent: "space-between",
+            maxWidth: "100vw",
+            maxHeight: "30vh",
           }}
         >
-          <p
+          <div
             style={{
-              fontSize: 24,
-              fontWeight: "bold",
-              color: "#2937f0",
+              display: "flex",
+              width: "100%",
+              height: "100%",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-around",
             }}
           >
-            {Title}
-          </p>
+            <div
+              style={{
+                maxWidth: "90%",
+                paddingTop: 10,
+              }}
+            >
+              <p
+                style={{
+                  fontSize: 24,
+                  fontWeight: "bold",
+                  color: "#2937f0",
+                }}
+              >
+                {Item.Title}
+              </p>
+            </div>
+
+            <div style={{}}>
+              <FontAwesomeIcon color="#2937f0" icon={faCheck} size={"2x"} />
+            </div>
+          </div>
+
+          {/* Separator */}
+          <div
+            style={{
+              marginTop: 5,
+              // marginBottom: ,
+              height: 0.2,
+              backgroundColor: "#C4BDB7",
+              opacity: 0.4,
+              marginVertical: "3%",
+            }}
+          />
 
           <div
             style={{
-              backgroundColor: "grey",
-              borderRadius: 24,
-              height: 24,
-              width: 24,
-            }}
-          />
-        </div>
-
-        <div
-          style={{
-            marginTop: 10,
-            height: 0.2,
-            backgroundColor: "#C4BDB7",
-            opacity: 0.4,
-            marginVertical: "3%",
-          }}
-        />
-        <div
-          style={{
-            paddingTop: "5%",
-          }}
-        >
-          <p
-            style={{
-              fontSize: 16,
-              color: "#91878f",
+              paddingTop: "5%",
             }}
           >
-            {Subtitle}
-          </p>
+            <p
+              style={{
+                fontSize: 14,
+                color: "#91878f",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                display: "-ms-flexbox",
+                lineHeight: 1.5 /* fallback */,
+                maxHeight: "7ch" /* fallback */,
+                WebkitLineClamp: 1,
+                WebkitBoxOrient: "vertical",
+                //  -webkit-line-clamp: 2, /* number of lines to show */
+                //  -webkit-box-orient: vertical,
+              }}
+            >
+              {Item.Subtitle}
+            </p>
+          </div>
         </div>
       </div>{" "}
     </>

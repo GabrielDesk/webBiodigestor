@@ -9,7 +9,10 @@ import { Grid, Typography, Unstable_Grid2 } from "@mui/material";
 import Lottie from "react-lottie";
 import animationData from "../../../public/assets/lotties/saveEnergyPlug.json";
 import animationDataGreenEnergy from "../../../public/assets/lotties/greenEnergy.json";
+import animationDataCleanCity from "../../../public/assets/lotties/cleanCity.json";
 import InformationCard from "../../../public/components/InformationCard";
+
+import InformationCardObject from "../../../public/components/InformationCard/objects/InformationCardObject";
 
 import { motion } from "framer-motion";
 import FirstAndSecond from "../../components/FirstAndSecond";
@@ -21,6 +24,8 @@ import { blue } from "@mui/material/colors";
 
 const MontserratFam = Montserrat();
 
+const InfoCardO = InformationCardObject;
+
 const Header = () => {
   const defaultOptions = {
     loop: true,
@@ -30,10 +35,18 @@ const Header = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-  const defaultOptionsCleanCity = {
+  const defaultOptionsGreenEnergy = {
     loop: true,
     autoplay: true,
     animationData: animationDataGreenEnergy,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+  const defaultOptionsCleanCity = {
+    loop: true,
+    autoplay: true,
+    animationData: animationDataCleanCity,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -121,6 +134,7 @@ const Header = () => {
               style={{
                 fontFamily: MontserratFam,
                 fontWeight: "700",
+                // color: "#0074BA",
                 color: "#2937f0",
                 // fontSize: 74,
               }}
@@ -203,11 +217,16 @@ const Header = () => {
               alignItems={"center"}
               justifyContent={"center"}
             >
-              <Lottie
-                options={defaultOptionsCleanCity}
-                height={"20rem"}
-                width={"20rem"}
+              <img
+                className="img-fluid"
+                src="/assets/img/futureLab.png"
+                alt="mao"
               />
+              {/* <Lottie
+                options={defaultOptions}
+                height={"30rem"}
+                width={"30rem"}
+              /> */}
             </Grid>
 
             {/* Components */}
@@ -222,46 +241,22 @@ const Header = () => {
               {/* coluna1 */}
               <Grid sm={12} md={6} lg={6} container style={{}}>
                 <Grid sm={12} container px={2}>
-                  <InformationCard
-                    Title={"Device Modal"}
-                    Subtitle="This section is perfect for featuring some information about your
-            application, why it was built, the problem it solves, or anything
-            else! Theres plenty of space for text here, so dont worry about
-            writing too much."
-                  />
+                  <InformationCard Item={InfoCardO.InfoCard1} />
                 </Grid>
 
                 <Grid sm={12} container px={2}>
-                  <InformationCard
-                    Title={"Device Modal"}
-                    Subtitle="This section is perfect for featuring some information about your
-            application, why it was built, the problem it solves, or anything
-            else! Theres plenty of space for text here, so dont worry about
-            writing too much."
-                  />
+                  <InformationCard Item={InfoCardO.InfoCard2} />
                 </Grid>
               </Grid>
 
               {/* coluna2 */}
               <Grid sm={12} md={6} lg={6} container style={{}}>
                 <Grid sm={12} container px={2}>
-                  <InformationCard
-                    Title={"Device Modal"}
-                    Subtitle="This section is perfect for featuring some information about your
-            application, why it was built, the problem it solves, or anything
-            else! Theres plenty of space for text here, so dont worry about
-            writing too much."
-                  />
+                  <InformationCard Item={InfoCardO.InfoCard3} />
                 </Grid>
 
                 <Grid sm={12} container px={2}>
-                  <InformationCard
-                    Title={"Device Modal"}
-                    Subtitle="This section is perfect for featuring some information about your
-            application, why it was built, the problem it solves, or anything
-            else! Theres plenty of space for text here, so dont worry about
-            writing too much."
-                  />
+                  <InformationCard Item={InfoCardO.InfoCard4} />
                 </Grid>
               </Grid>
             </Grid>
@@ -299,8 +294,14 @@ const Header = () => {
           </div>
         </section>
         {/* <!-- Call to action section--> */}
-        <section className="cta">
-          <div className="cta-content">
+        <Grid
+          sm={12}
+          md={12}
+          lg={12}
+          style={{ backgroundColor: "blue" }}
+          className="cta"
+        >
+          <Grid className="cta-content" style={{ backgoroundColor: "yellow" }}>
             <div className="container px-5">
               <h2 className="text-white display-1 lh-1 mb-4">
                 Stop waiting.
@@ -309,13 +310,15 @@ const Header = () => {
               </h2>
               <a
                 className="btn btn-outline-light py-3 px-4 rounded-pill"
-                // href="https://startbootstrap.com/theme/new-age" target="_blank"
+                // href="https://startbootstrap.com/theme/new-age"
+                target="_blank"
+                rel="noreferrer"
               >
                 Download for free
               </a>
             </div>
-          </div>
-        </section>
+          </Grid>
+        </Grid>
         {/* <!-- App badge section--> */}
         <section className="bg-gradient-primary-to-secondary" id="download">
           <div className="container px-5">
