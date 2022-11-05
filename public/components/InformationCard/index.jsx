@@ -24,7 +24,7 @@ const InformationCard = ({ Item = {} }) => {
         <div
           style={{
             maxWidth: "100vw",
-            maxHeight: "30vh",
+            maxHeight: "90vh",
           }}
         >
           <div
@@ -45,7 +45,7 @@ const InformationCard = ({ Item = {} }) => {
             >
               <p
                 style={{
-                  fontSize: 24,
+                  fontSize: 20,
                   fontWeight: "bold",
                   color: "#2937f0",
                 }}
@@ -84,7 +84,7 @@ const InformationCard = ({ Item = {} }) => {
                 textOverflow: "ellipsis",
                 display: "-ms-flexbox",
                 lineHeight: 1.5 /* fallback */,
-                maxHeight: "7ch" /* fallback */,
+                maxHeight: "9ch" /* fallback */,
                 WebkitLineClamp: 1,
                 WebkitBoxOrient: "vertical",
                 //  -webkit-line-clamp: 2, /* number of lines to show */
