@@ -6,13 +6,17 @@ import Script from "next/script";
 import { Montserrat } from "@next/font/google";
 
 import { Grid, Typography, Unstable_Grid2 } from "@mui/material";
+import COLORS from "../../../public/constants/COLORS.js";
 import Lottie from "react-lottie";
 import animationData from "../../../public/assets/lotties/saveEnergyPlug.json";
 import animationDataGreenEnergy from "../../../public/assets/lotties/greenEnergy.json";
 import animationDataCleanCity from "../../../public/assets/lotties/cleanCity.json";
-import InformationCard from "../../../public/components/InformationCard";
+import animationDataHappyGuy from "../../../public/assets/lotties/HappyGuy.json";
 
-import InformationCardObject from "../../../public/components/InformationCard/objects/InformationCardObject";
+import InformationCard from "../../../public/components/InformationCard";
+import CarouselInformation from "../../../public/components/CarouselInformation";
+
+import InformationCardObject from "../../../public/utils/objects/InformationCardObject";
 
 import { motion } from "framer-motion";
 import FirstAndSecond from "../../components/FirstAndSecond";
@@ -21,6 +25,7 @@ import { AwesomeButton } from "react-awesome-button";
 import zIndex from "@mui/material/styles/zIndex";
 import { Box, height, width } from "@mui/system";
 import { blue } from "@mui/material/colors";
+import DataCardInformation from "../../../public/components/DatalCardInformation/index.jsx";
 
 const MontserratFam = Montserrat();
 
@@ -30,7 +35,7 @@ const Header = () => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: animationData,
+    animationData: animationDataHappyGuy,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -135,7 +140,7 @@ const Header = () => {
                 fontFamily: MontserratFam,
                 fontWeight: "700",
                 // color: "#0074BA",
-                color: "#2937f0",
+                color: COLORS.BLUE_BODY_DEFAULT,
                 // fontSize: 74,
               }}
             >
@@ -152,7 +157,7 @@ const Header = () => {
                   fontFamily: MontserratFam,
                   fontWeight: 500,
                   fontSize: 16,
-                  color: "#91878f",
+                  color: COLORS.SUBTITLE_TEXT_DEFAULT,
                 }}
                 // className="lead fw-normal text-muted mb-5"
               >
@@ -207,7 +212,7 @@ const Header = () => {
         </aside>
 
         {/* <!-- App features section--> */}
-        <Grid sm={12} md={12} lg={12} container style={{ padding: "3%" }}>
+        <Grid sm={12} md={12} lg={12} container style={{ padding: "2%" }}>
           <Grid container sm={12} md={6} lg={6} columns={2}>
             <Grid
               sm={12}
@@ -264,37 +269,140 @@ const Header = () => {
         </Grid>
 
         {/* <!-- Basic features section--> */}
-        <section className="bg-light">
-          <div className="container px-5">
-            <div className="row gx-5 align-items-center justify-content-center justify-content-lg-between">
-              <div className="col-12 col-lg-5">
-                <h2 className="display-4 lh-1 mb-4">
-                  Enter a new age of web design
-                </h2>
-                <p className="lead fw-normal text-muted mb-5 mb-lg-0">
-                  This section is perfect for featuring some information about
-                  your application, why it was built, the problem it solves, or
-                  anything else! Theres plenty of space for text here, so dont
-                  worry about writing too much.
-                </p>
-              </div>
-              <div className="col-sm-8 col-md-6">
-                <div className="px-5 px-sm-0">
-                  {/* <Lottie options={defaultOptions} height={200} width={200} /> */}
-                  {/* <Image
-                    height={300}
-                    width={300}
-                    className="img-fluid"
-                    src="/assets/img/google-play-badge.svg"
-                    alt="mao"
-                  /> */}
+
+        <Grid
+          sm={12}
+          md={12}
+          lg={12}
+          container
+          style={{
+            background: "rgba(248, 249, 250)",
+            opacity: 2,
+            padding: "2%",
+          }}
+        >
+          <Grid container sm={12} md={6} lg={6} columns={2}>
+            <Grid
+              sm={12}
+              md={6}
+              lg={6}
+              container
+              alignItems={"center"}
+              justifyContent={"center"}
+            >
+              <div
+                style={{
+                  padding: "5%",
+                  height: "100%",
+                  // backgroundColor: "blue",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-evenly",
+                }}
+              >
+                <div
+                  style={{
+                    width: "90%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignSelf: "center",
+                    // backgroundColor: "yellow",
+                  }}
+                >
+                  <h1
+                    style={{
+                      fontWeight: "700",
+                      color: COLORS.BLUE_BODY_DEFAULT,
+                    }}
+                  >
+                    E o biodigestor, o que é?
+                  </h1>
+                </div>
+
+                <div
+                  style={{
+                    width: "90%",
+                    justifyContent: "center",
+                    // display: "flex",
+                    alignSelf: "center",
+                  }}
+                >
+                  <p
+                    style={{
+                      fontSize: 20,
+                      color: COLORS.SUBTITLE_TEXT_DEFAULT,
+                      textAlign: "justify",
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    O biodigestor é um equipamento que, por meio da ausência de
+                    oxigénio, faz a decomposição da matéria orgânica que pode
+                    ser tanto restos de alimentas camo também decretos de
+                    animais. Este processa de decampasição ocorre por
+                    biodigestão anaeróbica.
+                  </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
+            </Grid>
+
+            <Grid
+              sm={12}
+              md={6}
+              lg={6}
+              container
+              alignItems={"center"}
+              justifyContent={"center"}
+            >
+              <Lottie
+                options={defaultOptions}
+                height={"30rem"}
+                width={"30rem"}
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+
         {/* <!-- Call to action section--> */}
         <Grid
+          sm={12}
+          md={12}
+          lg={12}
+          container
+          style={{
+            background: "rgb(245, 245, 245)",
+
+            opacity: 2,
+            padding: "2%",
+          }}
+        >
+          <Grid
+            container
+            sm={12}
+            md={6}
+            lg={6}
+            columns={2}
+            alignItems={"center"}
+            justifyContent={"center"}
+          >
+            {/* Components */}
+            <Grid sm={12} md={6} lg={6} container>
+              <CarouselInformation />
+            </Grid>
+
+            <Grid
+              sm={12}
+              md={6}
+              lg={6}
+              container
+              alignItems={"center"}
+              justifyContent={"center"}
+            >
+              <DataCardInformation />
+            </Grid>
+          </Grid>
+        </Grid>
+
+        {/* <Grid
           sm={12}
           md={12}
           lg={12}
@@ -318,7 +426,8 @@ const Header = () => {
               </a>
             </div>
           </Grid>
-        </Grid>
+        </Grid> */}
+
         {/* <!-- App badge section--> */}
         <section className="bg-gradient-primary-to-secondary" id="download">
           <div className="container px-5">

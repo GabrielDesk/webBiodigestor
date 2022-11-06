@@ -1,6 +1,9 @@
+/* eslint-disable */
+/* eslint quotes: ["error", "double"], curly: 2 */
+
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faBolt } from "@fortawesome/free-solid-svg-icons";
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -55,7 +58,8 @@ const InformationCard = ({ Item = {} }) => {
             </div>
 
             <div style={{}}>
-              <FontAwesomeIcon color="#2937f0" icon={faCheck} size={"2x"} />
+              {/* <FontAwesomeIcon icon="fa-regular fa-bolt" /> */}
+              <FontAwesomeIcon color="#2937f0" icon={faBolt} size={"2x"} />
             </div>
           </div>
 
@@ -95,7 +99,7 @@ const InformationCard = ({ Item = {} }) => {
             </p>
           </div>
         </div>
-      </div>{" "}
+      </div>
     </>
   );
 };

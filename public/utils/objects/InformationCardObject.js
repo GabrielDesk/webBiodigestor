@@ -33,12 +33,12 @@
 const InformationCardObject = {
    InfoCard1:{
     Id: 1,
-    Title: "Uma Fonte de energia limpa",
+    Title: "Uma fonte de energia limpa",
     Subtitle: 'Emite menos poluentes que as fontes de energia tradicionais, contribuindo para desacelerar o efeito estufa!',
    },
    InfoCard2:{
     Id: 2,
-    Title: "Uma Fonte de energia Renovável",
+    Title: "Uma fonte de energia Renovável",
     Subtitle: "Permite o reaproveitamento de resíduos que seriam descartados, reduzindo o desperdício!",
    },
    InfoCard3:{
