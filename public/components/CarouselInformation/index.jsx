@@ -1,9 +1,13 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBolt } from "@fortawesome/free-solid-svg-icons";
+import futureLab from "../../../public/assets/img/futureLab.png";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import COLORS from "../../constants/COLORS.js";
 
 import CarouselInformationObj from "../../utils/objects/CarouselInformationObject.js";
 import ContentSlider from "./Patterns/contentSlider/index";
@@ -18,12 +22,12 @@ const CarouselInformation = ({ Item = {} }) => {
   const settings = {
     dots: true,
     infinite: true,
-    fade: true,
-    speed: 1000,
+    speed: 2000,
+    delay: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    arrows: false,
+    arrows: true,
   };
 
   return (
@@ -52,15 +56,16 @@ const CarouselInformation = ({ Item = {} }) => {
             height: "102%",
             boxShadow: "2px 4px 9px #FFCFDF",
             borderRadius: 5,
-            padding: 25,
+            padding: 30,
             backgroundColor: "#fff",
+            // backgroundColor: "blue",
           }}
         >
           <div
             styles={{
               height: "100%",
               width: "100%",
-              justifyContent: "center",
+              backgroundColor: "blue",
             }}
           >
             <Slider {...settings}>

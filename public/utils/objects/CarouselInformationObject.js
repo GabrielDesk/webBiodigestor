@@ -20,7 +20,7 @@ const CarouselInformationObject = {
    },
    InfoContentSlide4:{
     Id: 4,
-    Title: "Biocombustíveis biodegradáveis",
+    Title: "Biocombustíveis degradáveis",
     Subtitle: "Polui menos pois, emitem menos compostos do que os combustíveis fósseis na combustão de motores!",
     ImageSrc: '/assets/img/homePageFirstPart.png'
    },

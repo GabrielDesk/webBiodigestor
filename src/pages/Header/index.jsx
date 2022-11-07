@@ -2,30 +2,26 @@
 import React from "react";
 import Image from "next/image";
 import Script from "next/script";
+import Lottie from "react-lottie";
+import { Grid, Typography, Unstable_Grid2 } from "@mui/material";
 
 import { Montserrat } from "@next/font/google";
 
-import { Grid, Typography, Unstable_Grid2 } from "@mui/material";
-import COLORS from "../../../public/constants/COLORS.js";
-import Lottie from "react-lottie";
+// animations
 import animationData from "../../../public/assets/lotties/saveEnergyPlug.json";
 import animationDataGreenEnergy from "../../../public/assets/lotties/greenEnergy.json";
 import animationDataCleanCity from "../../../public/assets/lotties/cleanCity.json";
 import animationDataHappyGuy from "../../../public/assets/lotties/HappyGuy.json";
 
+// patterns
 import InformationCard from "../../../public/components/InformationCard";
 import CarouselInformation from "../../../public/components/CarouselInformation";
 
+// data
 import InformationCardObject from "../../../public/utils/objects/InformationCardObject";
-
-import { motion } from "framer-motion";
-import FirstAndSecond from "../../components/FirstAndSecond";
-import SocialMediaImage from "../../images/HomePage/3dsocialmedia.png";
-import { AwesomeButton } from "react-awesome-button";
-import zIndex from "@mui/material/styles/zIndex";
-import { Box, height, width } from "@mui/system";
-import { blue } from "@mui/material/colors";
 import DataCardInformation from "../../../public/components/DatalCardInformation/index.jsx";
+import COLORS from "../../../public/constants/COLORS.js";
+import CuriositiesCard from "../../../public/components/CuriositiesCard";
 
 const MontserratFam = Montserrat();
 
@@ -70,7 +66,7 @@ const Header = () => {
       <Script src="https://cdn.startbootstrap.com/sb-forms-latest.js" />
 
       <Grid id="page-top">
-        {/* <!-- Navigation--> */}
+        {/* <!-- 1 - Navigation--> */}
         <nav
           className="navbar navbar-expand-lg navbar-light fixed-top shadow-sm"
           id="mainNav"
@@ -121,8 +117,8 @@ const Header = () => {
             </div>
           </div>
         </nav>
-        {/* <!-- Mashead header--> */}
 
+        {/* <!-- 2 - Intro Section header--> */}
         <Grid
           container
           sm={12}
@@ -190,7 +186,7 @@ const Header = () => {
           </Grid>
         </Grid>
 
-        {/* <!-- Quote/testimonial aside--> */}
+        {/* <!-- 3 - Concept section --> */}
         <aside className="text-center bg-gradient-primary-to-secondary">
           <div className="container px-5">
             <div className="row gx-5 justify-content-center">
@@ -211,7 +207,7 @@ const Header = () => {
           </div>
         </aside>
 
-        {/* <!-- App features section--> */}
+        {/* <!-- 4 - Cards Section --> */}
         <Grid sm={12} md={12} lg={12} container style={{ padding: "2%" }}>
           <Grid container sm={12} md={6} lg={6} columns={2}>
             <Grid
@@ -268,8 +264,7 @@ const Header = () => {
           </Grid>
         </Grid>
 
-        {/* <!-- Basic features section--> */}
-
+        {/* <!-- 5 - Biodigestor Section --> */}
         <Grid
           sm={12}
           md={12}
@@ -362,7 +357,7 @@ const Header = () => {
           </Grid>
         </Grid>
 
-        {/* <!-- Call to action section--> */}
+        {/* <!-- 6 - Slider(Carousel)/Video Image Section--> */}
         <Grid
           sm={12}
           md={12}
@@ -402,35 +397,100 @@ const Header = () => {
           </Grid>
         </Grid>
 
-        {/* <Grid
+        {/* <!-- 7 - Curiosities Section--> */}
+        <Grid
           sm={12}
           md={12}
           lg={12}
-          style={{ backgroundColor: "blue" }}
-          className="cta"
+          container
+          style={{
+            background: `linear-gradient(45deg, #2937f0, #9f1ae2)`,
+          }}
         >
-          <Grid className="cta-content" style={{ backgoroundColor: "yellow" }}>
-            <div className="container px-5">
-              <h2 className="text-white display-1 lh-1 mb-4">
-                Stop waiting.
-                <br />
-                Start building.
-              </h2>
-              <a
-                className="btn btn-outline-light py-3 px-4 rounded-pill"
-                // href="https://startbootstrap.com/theme/new-age"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Download for free
-              </a>
-            </div>
-          </Grid>
-        </Grid> */}
+          <Grid
+            sm={12}
+            md={12}
+            lg={12}
+            style={
+              {
+                // background: "#000",
+              }
+            }
+            container
+          >
+            {/* Curiosities Text */}
+            <Grid
+              style={{
+                // background: " yellow",
+                alignItems: "center",
+                justifyContent: "center",
+                margin: 15,
+                padding: 15,
+              }}
+              direction={"column"}
+              sm={12}
+              md={12}
+              lg={12}
+              container
+            >
+              <div
+                style={{
+                  marginTop: 10,
+                  marginBottom: 10,
+                  height: 3,
+                  width: "20%",
+                  borderRadius: 10,
+                  backgroundColor: COLORS.WHITE_DEFAULT,
+                }}
+              />
 
-        {/* <!-- App badge section--> */}
+              <h1 style={{ color: COLORS.WHITE_DEFAULT }}>Curiosidades: </h1>
+              <p
+                style={{
+                  fontSize: 15,
+                  fontWeight: 200,
+                  textAlign: "center",
+                  color: COLORS.WHITE_DEFAULT,
+                }}
+              >
+                {" "}
+                beneficios o reaproveitamento do resíduo orgânico, a produção de
+                fertilizantes e biogás -malefícios As desvantagens são: consumo
+                de água parada{" "}
+              </p>
+            </Grid>
+            <Grid
+              style={{
+                // background: " yellow",
+                alignItems: "center",
+                justifyContent: "center",
+                margin: 15,
+                padding: 15,
+              }}
+              direction={"row"}
+              sm={12}
+              md={12}
+              lg={12}
+              container
+            >
+              <Grid sm={12} md={3} lg={3} container px={2}>
+                <CuriositiesCard Item={InfoCardO.InfoCard1} />
+              </Grid>
+              <Grid sm={12} md={3} lg={3} container px={2}>
+                <CuriositiesCard Item={InfoCardO.InfoCard1} />
+              </Grid>
+              <Grid sm={12} md={3} lg={3} container px={2}>
+                <CuriositiesCard Item={InfoCardO.InfoCard1} />
+              </Grid>
+              <Grid sm={12} md={3} lg={3} container px={2}>
+                <CuriositiesCard Item={InfoCardO.InfoCard1} />
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+        {/*         
         <section className="bg-gradient-primary-to-secondary" id="download">
-          <div className="container px-5">
+          <Grid  className="container px-5">
             <h2 className="text-center text-white font-alt mb-4">
               Get the app now!
             </h2>
@@ -443,19 +503,20 @@ const Header = () => {
                   src="/assets/img/google-play-badge.svg"
                   alt="..."
                 /> */}
-              </a>
-              <a href="#!">
-                {/* <Image
+        {/* </a> */}
+        {/* <a href="#!"> */}
+        {/* <Image
                   height={300}
                   width={300}
                   // className="app-badge"
                   src="/assets/img/app-store-badge.svg"
                   alt="..."
                 /> */}
-              </a>
-            </div>
-          </div>
-        </section>
+        {/* </a> */}
+        {/* </div> */}
+        {/* </div> */}
+        {/* </section> */}
+
         {/* <!-- Footer--> */}
         <footer className="bg-black text-center py-5">
           <div className="container px-5">

@@ -44,7 +44,7 @@ const ContentSlider = ({ Item = {} }) => {
           <p
             style={{
               fontWeight: 700,
-              fontSize: 24,
+              fontSize: 20,
               color: COLORS.BLUE_BODY_DEFAULT,
             }}
           >
