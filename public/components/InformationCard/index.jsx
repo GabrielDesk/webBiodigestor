@@ -57,7 +57,7 @@ const InformationCard = ({ Item = {} }) => {
               </p>
             </div>
 
-            <div style={{}}>
+            <div style={{ margin: 20 }}>
               {/* <FontAwesomeIcon icon="fa-regular fa-bolt" /> */}
               <FontAwesomeIcon color="#2937f0" icon={faBolt} size={"2x"} />
             </div>

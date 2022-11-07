@@ -125,19 +125,16 @@ const Header = () => {
           md={12}
           lg={12}
           padding={"5%"}
-          style={{ marginTop: 110, marginBottom: 30 }}
+          style={{ marginTop: 108, marginBottom: 30 }}
         >
           {/* gridTexts */}
 
           <Grid container sm={12} md={6} lg={6}>
             <h1
-              // variant={"h1"}
               style={{
                 fontFamily: MontserratFam,
                 fontWeight: "700",
-                // color: "#0074BA",
                 color: COLORS.BLUE_BODY_DEFAULT,
-                // fontSize: 74,
               }}
             >
               Bioenergia.
@@ -150,16 +147,16 @@ const Header = () => {
             <div style={{ marginTop: 2 }}>
               <p
                 style={{
-                  fontFamily: MontserratFam,
-                  fontWeight: 500,
+                  fontWeight: 600,
+                  lineHeight: 1.8,
                   fontSize: 16,
                   color: COLORS.SUBTITLE_TEXT_DEFAULT,
                 }}
-                // className="lead fw-normal text-muted mb-5"
               >
-                Quem construiu, qual foi a sua necessidade e porque ele é tão
-                benéfico a nossa sociedade? Essas são perguntas que sanaremos
-                logo abaixo :)
+                Obtida por meio da biomassa, a sua utilização procede da
+                produção de calor, eletricidade e combustíveis. Qual foi a sua
+                necessidade e porque ela é tão benéfico a nossa sociedade? Essas
+                são perguntas que sanaremos logo abaixo :)
               </p>
             </div>
           </Grid>
@@ -192,13 +189,12 @@ const Header = () => {
             <div className="row gx-5 justify-content-center">
               <div className="col-xl-8">
                 <div className="h2 fs-1 text-white mb-4">
-                  Conceito: energia renovável que é obtida do processamento de
-                  matéria formada por um processo mecânico ou biológico.
+                  Conceito de bioenergia: Energia renovável que é obtida do
+                  processamento de matéria formada por um processo mecânico ou
+                  biológico.
                 </div>
-                <Image
-                  style={{ paddingTop: 10 }}
-                  height={100}
-                  width={200}
+                <img
+                  style={{ height: "90px", width: "190px", paddingTop: 10 }}
                   src="/assets/img/UnivapTransparentLogo.jpg"
                   alt="..."
                 />
@@ -223,11 +219,6 @@ const Header = () => {
                 src="/assets/img/futureLab.png"
                 alt="mao"
               />
-              {/* <Lottie
-                options={defaultOptions}
-                height={"30rem"}
-                width={"30rem"}
-              /> */}
             </Grid>
 
             {/* Components */}
@@ -289,7 +280,6 @@ const Header = () => {
                 style={{
                   padding: "5%",
                   height: "100%",
-                  // backgroundColor: "blue",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-evenly",
@@ -301,7 +291,6 @@ const Header = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignSelf: "center",
-                    // backgroundColor: "yellow",
                   }}
                 >
                   <h1
@@ -318,7 +307,6 @@ const Header = () => {
                   style={{
                     width: "90%",
                     justifyContent: "center",
-                    // display: "flex",
                     alignSelf: "center",
                   }}
                 >
@@ -327,14 +315,15 @@ const Header = () => {
                       fontSize: 20,
                       color: COLORS.SUBTITLE_TEXT_DEFAULT,
                       textAlign: "justify",
-                      lineHeight: 1.5,
+                      lineHeight: 1.7,
                     }}
                   >
                     O biodigestor é um equipamento que, por meio da ausência de
                     oxigénio, faz a decomposição da matéria orgânica que pode
-                    ser tanto restos de alimentas camo também decretos de
-                    animais. Este processa de decampasição ocorre por
-                    biodigestão anaeróbica.
+                    ser tanto restos de alimentos como também dejetos de
+                    animais, usando a pressão do gás para{" "}
+                    <b>Geração De Energia</b>. Este processo de decomposição
+                    ocorre por biodigestão anaeróbica.
                   </p>
                 </div>
               </div>
@@ -365,7 +354,6 @@ const Header = () => {
           container
           style={{
             background: "rgb(245, 245, 245)",
-
             opacity: 2,
             padding: "2%",
           }}
@@ -407,21 +395,10 @@ const Header = () => {
             background: `linear-gradient(45deg, #2937f0, #9f1ae2)`,
           }}
         >
-          <Grid
-            sm={12}
-            md={12}
-            lg={12}
-            style={
-              {
-                // background: "#000",
-              }
-            }
-            container
-          >
+          <Grid sm={12} md={12} lg={12} style={{}} container>
             {/* Curiosities Text */}
             <Grid
               style={{
-                // background: " yellow",
                 alignItems: "center",
                 justifyContent: "center",
                 margin: 15,
@@ -447,21 +424,28 @@ const Header = () => {
               <h1 style={{ color: COLORS.WHITE_DEFAULT }}>Curiosidades: </h1>
               <p
                 style={{
-                  fontSize: 15,
+                  fontSize: 22,
                   fontWeight: 200,
                   textAlign: "center",
+                  lineHeight: 1.5,
                   color: COLORS.WHITE_DEFAULT,
                 }}
               >
-                {" "}
-                beneficios o reaproveitamento do resíduo orgânico, a produção de
-                fertilizantes e biogás -malefícios As desvantagens são: consumo
-                de água parada{" "}
+                O biodigestor é basicamente uma câmara fechada, que é alimentada
+                de resíduos orgânicos, essas matérias são misturadas com água,
+                e, através da falta de oxigenação algumas bactérias atuam nesses
+                detritos transformando-os em biogás
+                <br />
+                <br />
+                Os principais tipos de Biodigestor são: <br />
+                <b>
+                  • Biodigestor: batelada.
+                  <br />• Biodigestor: contínuo.
+                </b>{" "}
               </p>
             </Grid>
             <Grid
               style={{
-                // background: " yellow",
                 alignItems: "center",
                 justifyContent: "center",
                 margin: 15,
@@ -489,40 +473,13 @@ const Header = () => {
           </Grid>
         </Grid>
         {/*         
-        <section className="bg-gradient-primary-to-secondary" id="download">
-          <Grid  className="container px-5">
-            <h2 className="text-center text-white font-alt mb-4">
-              Get the app now!
-            </h2>
-            <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-              <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
-                {/* <Image
-                  height={300}
-                  width={300}
-                  // className="app-badge"
-                  src="/assets/img/google-play-badge.svg"
-                  alt="..."
-                /> */}
-        {/* </a> */}
-        {/* <a href="#!"> */}
-        {/* <Image
-                  height={300}
-                  width={300}
-                  // className="app-badge"
-                  src="/assets/img/app-store-badge.svg"
-                  alt="..."
-                /> */}
-        {/* </a> */}
-        {/* </div> */}
-        {/* </div> */}
-        {/* </section> */}
-
+        
         {/* <!-- Footer--> */}
         <footer className="bg-black text-center py-5">
           <div className="container px-5">
             <div className="text-white-50 small">
               <div className="mb-2">
-                &copy; Your Website 2022. All Rights Reserved.
+                &copy; Biodigestor Website 2022. All Rights Reserved.
               </div>
               <a href="#!">Privacy</a>
               <span className="mx-1">&middot;</span>

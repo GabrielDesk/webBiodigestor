@@ -70,16 +70,16 @@ const CarouselInformation = ({ Item = {} }) => {
           >
             <Slider {...settings}>
               <div style={{ width: "100%", padding: "2%" }}>
-                <ContentSlider Item={InfoContentCarousel.InfoContentSlide2} />
-              </div>
-              <div style={{ width: "100%", padding: "2%" }}>
                 <ContentSlider Item={InfoContentCarousel.InfoContentSlide1} />
               </div>
               <div style={{ width: "100%", padding: "2%" }}>
-                <ContentSlider Item={InfoContentCarousel.InfoContentSlide4} />
+                <ContentSlider Item={InfoContentCarousel.InfoContentSlide2} />
               </div>
               <div style={{ width: "100%", padding: "2%" }}>
                 <ContentSlider Item={InfoContentCarousel.InfoContentSlide3} />
+              </div>
+              <div style={{ width: "100%", padding: "2%" }}>
+                <ContentSlider Item={InfoContentCarousel.InfoContentSlide4} />
               </div>
             </Slider>
           </div>
