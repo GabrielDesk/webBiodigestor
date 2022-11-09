@@ -24,8 +24,8 @@ import COLORS from "../../../public/constants/COLORS.js";
 import CuriositiesCard from "../../../public/components/CuriositiesCard";
 
 //svgs
-// import CleanWorld from "../../../public/assets/img/svgs/CleanEnergyWorld.svg";
-// import WomanAndEnergy from "../../../public/assets/img/svgs/WomanAndEnergyCity.svg";
+import CleanWorld from "../../../public/assets/img/svgs/CleanEnergyWorld.svg";
+import WomanAndEnergy from "../../../public/assets/img/svgs/WomanAndEnergyCity.svg";
 
 const InfoCardO = InformationCardObject;
 const CuriositiesO = CuriositiesCardObject;
@@ -123,7 +123,7 @@ const Header = () => {
           sm={12}
           md={12}
           lg={12}
-          style={{ padding: "2%", paddingBottom: "7%" }}
+          style={{ padding: "2%", paddingBottom: "5%" }}
         >
           {/* gridTexts */}
 
@@ -177,11 +177,17 @@ const Header = () => {
               alignSelf: "end",
             }}
           >
-            <img
+            <CleanWorld
+              style={{
+                height: "100%",
+                width: "100%",
+              }}
+            />
+            {/* <img
               style={{ height: "100%", width: "100%" }}
               src="/assets/img/svgs/CleanEnergyWorld.svg"
               alt="Clean World"
-            />
+            /> */}
           </Grid>
         </Grid>
 
@@ -216,14 +222,20 @@ const Header = () => {
               alignItems={"end"}
               justifyContent={"center"}
             >
-              <img
+              <WomanAndEnergy
+                style={{
+                  height: "90%",
+                  width: "90%",
+                }}
+              />
+              {/* <img
                 style={{
                   height: "90%",
                   width: "90%",
                 }}
                 src="/assets/img/svgs/WomanAndEnergyCity.svg"
                 alt="Take care of the world!"
-              />
+              /> */}
             </Grid>
 
             {/* Components */}
