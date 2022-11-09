@@ -76,7 +76,7 @@ const Header = () => {
               href="#page-top"
               style={{ fontSize: 25 }}
             >
-              Univap⚡
+              Univap
             </a>
             <button
               className="navbar-toggler"
