@@ -24,8 +24,8 @@ import COLORS from "../../../public/constants/COLORS.js";
 import CuriositiesCard from "../../../public/components/CuriositiesCard";
 
 //svgs
-import CleanWorld from "../../../public/assets/img/svgs/CleanEnergyWorld.svg";
-import WomanAndEnergy from "../../../public/assets/img/svgs/WomanAndEnergyCity.svg";
+// import CleanWorld from "../../../public/assets/img/svgs/CleanEnergyWorld.svg";
+// import WomanAndEnergy from "../../../public/assets/img/svgs/WomanAndEnergyCity.svg";
 
 const InfoCardO = InformationCardObject;
 const CuriositiesO = CuriositiesCardObject;
