@@ -132,7 +132,7 @@ const Header = () => {
             lg={6}
             style={{ display: "flex", justifyContent: "space-evenly" }}
           >
-            <div style={{ marginTop: "9vh", width: "95%" }}>
+            <div style={{ marginTop: 120, width: "95%" }}>
               <h1
                 style={{
                   fontFamily: MontserratFam,

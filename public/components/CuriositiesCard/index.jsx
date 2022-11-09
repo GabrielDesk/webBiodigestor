@@ -18,7 +18,7 @@ const CuriositiesCard = ({ Item = {} }) => {
       <div
         style={{
           width: "100vw",
-          height: 250,
+          height: 370,
           backgroundColor: COLORS.WHITE_DEFAULT,
           boxShadow: "2px 2px 2px #fff",
           borderRadius: 10,
