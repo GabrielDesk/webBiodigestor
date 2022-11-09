@@ -38,7 +38,7 @@ const InformationCardObject = {
    },
    InfoCard2:{
     Id: 2,
-    Title: "Uma fonte de energia Renovável",
+    Title: "Fonte de energia Renovável",
     Subtitle: "Permite o reaproveitamento de resíduos que seriam descartados, reduzindo o desperdício!",
    },
    InfoCard3:{
@@ -48,7 +48,7 @@ const InformationCardObject = {
    },
    InfoCard4:{
     Id: 4,
-    Title: "Biocombustíveis biodegradáveis",
+    Title: "Biocombustível degradável",
     Subtitle: "Polui menos pois, emitem menos compostos do que os combustíveis fósseis na combustão de motores!",
    },
 };

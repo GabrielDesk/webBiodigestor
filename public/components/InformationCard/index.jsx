@@ -16,8 +16,8 @@ const InformationCard = ({ Item = {} }) => {
     <>
       <div
         style={{
-          maxWidth: "100vw",
-          maxHeight: "80vh",
+          width: "100vw",
+          height: 200,
           boxShadow: "2px 4px 9px #FFCFDF",
           borderRadius: 10,
           padding: "5%",
@@ -27,7 +27,7 @@ const InformationCard = ({ Item = {} }) => {
         <div
           style={{
             maxWidth: "100vw",
-            maxHeight: "90vh",
+            maxHeight: "80vh",
           }}
         >
           <div
@@ -57,7 +57,7 @@ const InformationCard = ({ Item = {} }) => {
               </p>
             </div>
 
-            <div style={{ margin: 20 }}>
+            <div style={{ margin: 10 }}>
               {/* <FontAwesomeIcon icon="fa-regular fa-bolt" /> */}
               <FontAwesomeIcon color="#2937f0" icon={faBolt} size={"2x"} />
             </div>
@@ -91,6 +91,8 @@ const InformationCard = ({ Item = {} }) => {
                 maxHeight: "9ch" /* fallback */,
                 WebkitLineClamp: 1,
                 WebkitBoxOrient: "vertical",
+                textAlign: "justify",
+
                 //  -webkit-line-clamp: 2, /* number of lines to show */
                 //  -webkit-box-orient: vertical,
               }}

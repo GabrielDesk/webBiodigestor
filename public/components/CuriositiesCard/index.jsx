@@ -17,10 +17,10 @@ const CuriositiesCard = ({ Item = {} }) => {
     <>
       <div
         style={{
-          maxWidth: "100vw",
-          maxHeight: "80vh",
+          width: "100vw",
+          height: 250,
           backgroundColor: COLORS.WHITE_DEFAULT,
-          boxShadow: "2px 2px 2px #FFCFDF",
+          boxShadow: "2px 2px 2px #fff",
           borderRadius: 10,
           padding: "5%",
           margin: "5% 2% 5% 0",
@@ -29,7 +29,7 @@ const CuriositiesCard = ({ Item = {} }) => {
         <div
           style={{
             maxWidth: "100vw",
-            maxHeight: "90vh",
+            maxHeight: "40vh",
           }}
         >
           <div
@@ -46,6 +46,7 @@ const CuriositiesCard = ({ Item = {} }) => {
               style={{
                 maxWidth: "90%",
                 paddingTop: 10,
+                maxHeight: "10vh",
               }}
             >
               <p
@@ -59,7 +60,7 @@ const CuriositiesCard = ({ Item = {} }) => {
               </p>
             </div>
 
-            <div style={{ margin: 20 }}>
+            <div style={{ margin: 10 }}>
               {/* <FontAwesomeIcon icon="fa-regular fa-bolt" /> */}
               <FontAwesomeIcon color="#2937f0" icon={faInfo} size={"2x"} />
             </div>
@@ -90,9 +91,11 @@ const CuriositiesCard = ({ Item = {} }) => {
                 textOverflow: "ellipsis",
                 display: "-ms-flexbox",
                 lineHeight: 1.5 /* fallback */,
-                maxHeight: "9ch" /* fallback */,
+                // maxHeight: "9ch" /* fallback */,
                 WebkitLineClamp: 1,
                 WebkitBoxOrient: "vertical",
+                textAlign: "justify",
+
                 //  -webkit-line-clamp: 2, /* number of lines to show */
                 //  -webkit-box-orient: vertical,
               }}

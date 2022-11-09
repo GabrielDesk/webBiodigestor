@@ -16,16 +16,23 @@ import animationDataHappyGuy from "../../../public/assets/lotties/HappyGuy.json"
 // patterns
 import InformationCard from "../../../public/components/InformationCard";
 import CarouselInformation from "../../../public/components/CarouselInformation";
-
-// data
-import InformationCardObject from "../../../public/utils/objects/InformationCardObject";
 import DataCardInformation from "../../../public/components/DatalCardInformation/index.jsx";
+
+// utils
+import InformationCardObject from "../../../public/utils/objects/InformationCardObject";
+import CuriositiesCardObject from "../../../public/utils/objects/CuriositiesCardObject";
+
 import COLORS from "../../../public/constants/COLORS.js";
 import CuriositiesCard from "../../../public/components/CuriositiesCard";
+
+//svgs
+import CleanWorld from "../../../public/assets/img/svgs/CleanEnergyWorld.svg";
+import WomanAndEnergy from "../../../public/assets/img/svgs/WomanAndEnergyCity.svg";
 
 const MontserratFam = Montserrat();
 
 const InfoCardO = InformationCardObject;
+const CuriositiesO = CuriositiesCardObject;
 
 const Header = () => {
   const defaultOptions = {
@@ -55,15 +62,11 @@ const Header = () => {
 
   return (
     <>
-      {/* <!-- Bootstrap core JS--> */}
+      {/* Scripts */}
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" />
-      {/* <!-- Core theme JS--> */}
       <Script src="js/scripts.js" />
-      {/* {/* <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *--> */}
-      {/* <!-- * *                               SB Forms JS                               * *--> */}
-      {/* <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *--> */}
-      {/* <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *--> */}
       <Script src="https://cdn.startbootstrap.com/sb-forms-latest.js" />
+      {/* -- Scripts */}
 
       <Grid id="page-top">
         {/* <!-- 1 - Navigation--> */}
@@ -95,23 +98,23 @@ const Header = () => {
               <ul className="navbar-nav ms-auto me-4 my-3 my-lg-0">
                 <li className="nav-item">
                   <a className="nav-link me-lg-3" href="#features">
-                    Features
+                    Eletrônica
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link me-lg-3" href="#download">
-                    Download
+                    2º ano A
                   </a>
                 </li>
               </ul>
               <button
                 className="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0"
                 data-bs-toggle="modal"
-                data-bs-target="#feedbackModal"
+                // data-bs-target="#feedbackModal"
               >
                 <span className="d-flex align-items-center">
                   <i className="bi-chat-text-fill me-2"></i>
-                  <span className="small">Send Feedback</span>
+                  <span className="small">A abertura para o futuro</span>
                 </span>
               </button>
             </div>
@@ -119,37 +122,38 @@ const Header = () => {
         </nav>
 
         {/* <!-- 2 - Intro Section header--> */}
-        <Grid
-          container
-          sm={12}
-          md={12}
-          lg={12}
-          padding={"5%"}
-          style={{ marginTop: 108, marginBottom: 30 }}
-        >
+        <Grid container sm={12} md={12} lg={12} style={{ padding: "1%" }}>
           {/* gridTexts */}
 
-          <Grid container sm={12} md={6} lg={6}>
-            <h1
-              style={{
-                fontFamily: MontserratFam,
-                fontWeight: "700",
-                color: COLORS.BLUE_BODY_DEFAULT,
-              }}
-            >
-              Bioenergia.
-              <br />
-              A energia que move o mundo!
-              <br />
-              📡🌎
-            </h1>
+          <Grid
+            container
+            sm={12}
+            md={6}
+            lg={6}
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+          >
+            <div style={{ marginTop: "9vh", width: "95%" }}>
+              <h1
+                style={{
+                  fontFamily: MontserratFam,
+                  fontWeight: "700",
+                  color: COLORS.BLUE_BODY_DEFAULT,
+                }}
+              >
+                Bioenergia.
+                <br />A energia que move o mundo!
+                <br />
+                📡🌎
+              </h1>
+            </div>
 
-            <div style={{ marginTop: 2 }}>
+            <div style={{ width: "95%" }}>
               <p
                 style={{
+                  textAlign: "justify",
                   fontWeight: 600,
                   lineHeight: 1.8,
-                  fontSize: 16,
+                  fontSize: 18,
                   color: COLORS.SUBTITLE_TEXT_DEFAULT,
                 }}
               >
@@ -169,16 +173,14 @@ const Header = () => {
             lg={6}
             style={{
               justifyContent: "center",
+              alignSelf: "center",
             }}
           >
-            <img
+            <CleanWorld
               style={{
-                alignSelf: "center",
                 height: "100%",
                 width: "100%",
               }}
-              src="/assets/img/homePageFirstPart.png"
-              alt="..."
             />
           </Grid>
         </Grid>
@@ -204,21 +206,27 @@ const Header = () => {
         </aside>
 
         {/* <!-- 4 - Cards Section --> */}
-        <Grid sm={12} md={12} lg={12} container style={{ padding: "2%" }}>
+        <Grid sm={12} md={12} lg={12} container style={{}}>
           <Grid container sm={12} md={6} lg={6} columns={2}>
             <Grid
               sm={12}
               md={6}
               lg={6}
               container
-              alignItems={"center"}
+              alignItems={"end"}
               justifyContent={"center"}
             >
-              <img
+              <WomanAndEnergy
+                style={{
+                  height: "90%",
+                  width: "90%",
+                }}
+              />
+              {/* <img
                 className="img-fluid"
                 src="/assets/img/futureLab.png"
                 alt="mao"
-              />
+              /> */}
             </Grid>
 
             {/* Components */}
@@ -227,27 +235,52 @@ const Header = () => {
               md={6}
               lg={6}
               container
+              style={{}}
               alignItems={"center"}
               justifyContent={"center"}
             >
+              <div
+                style={{
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: 15,
+                  textAlign: "right",
+                  marginBottom: "-2%",
+                  marginTop: "4%",
+                  width: "100%",
+                }}
+              >
+                <h1
+                  style={{
+                    width: "100%",
+
+                    fontFamily: MontserratFam,
+                    fontWeight: "700",
+                    color: COLORS.BLUE_BODY_DEFAULT,
+                  }}
+                >
+                  Quais são seus benefícios?
+                </h1>
+              </div>
+
               {/* coluna1 */}
               <Grid sm={12} md={6} lg={6} container style={{}}>
-                <Grid sm={12} container px={2}>
+                <Grid sm={12} container px={1}>
                   <InformationCard Item={InfoCardO.InfoCard1} />
                 </Grid>
 
-                <Grid sm={12} container px={2}>
+                <Grid sm={12} container px={1}>
                   <InformationCard Item={InfoCardO.InfoCard2} />
                 </Grid>
               </Grid>
 
               {/* coluna2 */}
               <Grid sm={12} md={6} lg={6} container style={{}}>
-                <Grid sm={12} container px={2}>
+                <Grid sm={12} container px={1}>
                   <InformationCard Item={InfoCardO.InfoCard3} />
                 </Grid>
 
-                <Grid sm={12} container px={2}>
+                <Grid sm={12} container px={1}>
                   <InformationCard Item={InfoCardO.InfoCard4} />
                 </Grid>
               </Grid>
@@ -401,7 +434,6 @@ const Header = () => {
               style={{
                 alignItems: "center",
                 justifyContent: "center",
-                margin: 15,
                 padding: 15,
               }}
               direction={"column"}
@@ -448,7 +480,6 @@ const Header = () => {
               style={{
                 alignItems: "center",
                 justifyContent: "center",
-                margin: 15,
                 padding: 15,
               }}
               direction={"row"}
@@ -457,17 +488,17 @@ const Header = () => {
               lg={12}
               container
             >
-              <Grid sm={12} md={3} lg={3} container px={2}>
-                <CuriositiesCard Item={InfoCardO.InfoCard1} />
+              <Grid sm={12} md={3} lg={3} container px={1}>
+                <CuriositiesCard Item={CuriositiesO.Curiositie1} />
               </Grid>
-              <Grid sm={12} md={3} lg={3} container px={2}>
-                <CuriositiesCard Item={InfoCardO.InfoCard1} />
+              <Grid sm={12} md={3} lg={3} container px={1}>
+                <CuriositiesCard Item={CuriositiesO.Curiositie2} />
               </Grid>
-              <Grid sm={12} md={3} lg={3} container px={2}>
-                <CuriositiesCard Item={InfoCardO.InfoCard1} />
+              <Grid sm={12} md={3} lg={3} container px={1}>
+                <CuriositiesCard Item={CuriositiesO.Curiositie3} />
               </Grid>
-              <Grid sm={12} md={3} lg={3} container px={2}>
-                <CuriositiesCard Item={InfoCardO.InfoCard1} />
+              <Grid sm={12} md={3} lg={3} container px={1}>
+                <CuriositiesCard Item={CuriositiesO.Curiositie4} />
               </Grid>
             </Grid>
           </Grid>
@@ -514,12 +545,6 @@ const Header = () => {
                 ></button>
               </div>
               <div className="modal-body border-0 p-4">
-                {/* <!-- * * * * * * * * * * * * * * *--> */}
-                {/* <!-- * * SB Forms Contact Form * *--> */}
-                {/* <!-- * * * * * * * * * * * * * * *--> */}
-                {/* <!-- This form is pre-integrated with SB Forms.--> */}
-                {/* <!-- To make this form functional, sign up at--> */}
-                {/* <!-- https://startbootstrap.com/solution/contact-forms--> */}
                 {/* <!-- to get an API token!--> */}
                 <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                   {/* <!-- Name input--> */}

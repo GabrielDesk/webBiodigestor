@@ -31,25 +31,25 @@
 
 
 const CuriositiesCardObject = {
-   InfoCard1:{
+   Curiositie1:{
     Id: 1,
-    Title: "Uma fonte de energia limpa",
-    Subtitle: 'Emite menos poluentes que as fontes de energia tradicionais, contribuindo para desacelerar o efeito estufa!',
+    Title: "Biodigestor batelada",
+    Subtitle: 'São biodigestores que operam de forma descontinua, são alimentados de uma vez com uma grande quantidade de matéria orgânica e, depois são fechados de forma a não permitir a entrada de oxigênio por um certo período de tempo.',
    },
-   InfoCard2:{
+   Curiositie2:{
     Id: 2,
-    Title: "Uma fonte de energia Renovável",
-    Subtitle: "Permite o reaproveitamento de resíduos que seriam descartados, reduzindo o desperdício!",
+    Title: "Biodigestor contínuo",
+    Subtitle: "Biodigestores de operação contínua operam com cargas diárias de matéria orgânica que se movimentam por meio de uma carga hidráulica dentro do biodigestor, devendo a matéria orgânica ser diluída antes de ser colocada no biodigestor",
    },
-   InfoCard3:{
+   Curiositie3:{
     Id: 3,
-    Title: "Baixo custo de produção",
-    Subtitle: "Alto potencial de geração de energia, sendo benéfica para o meio ambiente, não exigindo altos investimentos!",
+    Title: "Geração de combustível",
+    Subtitle: 'Você sabia que com 1m³(metro cúbico) de biogás equivale energeticamente a 0,70 litros de gasolina',
    },
-   InfoCard4:{
+   Curiositie4:{
     Id: 4,
-    Title: "Biocombustíveis biodegradáveis",
-    Subtitle: "Polui menos pois, emitem menos compostos do que os combustíveis fósseis na combustão de motores!",
+    Title: "O que mais o gás faz?",
+    Subtitle: "Este gás gerado pelas fezes das galinhas é usado para aquecer os ovos nas incubadoras. O resíduo sólido que sobra no biodigestor também pode ser aproveitado como fertilizante!",
    },
 };
 
