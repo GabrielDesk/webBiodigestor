@@ -1,4 +1,4 @@
 {
-  "extends": "next/core-web-vitals",
-  "rules": { "avoidEscape": true, "quotes": "off" }
+  "extends": "next/core-web-vitals"
+  // "rules": { "avoidEscape": true, "quotes": "off" }
 }
