@@ -5,8 +5,6 @@ import Script from "next/script";
 import Lottie from "react-lottie";
 import { Grid, Typography, Unstable_Grid2 } from "@mui/material";
 
-import { Montserrat } from "@next/font/google";
-
 // animations
 import animationData from "../../../public/assets/lotties/saveEnergyPlug.json";
 import animationDataGreenEnergy from "../../../public/assets/lotties/greenEnergy.json";
@@ -28,8 +26,6 @@ import CuriositiesCard from "../../../public/components/CuriositiesCard";
 //svgs
 import CleanWorld from "../../../public/assets/img/svgs/CleanEnergyWorld.svg";
 import WomanAndEnergy from "../../../public/assets/img/svgs/WomanAndEnergyCity.svg";
-
-const MontserratFam = Montserrat();
 
 const InfoCardO = InformationCardObject;
 const CuriositiesO = CuriositiesCardObject;
@@ -122,7 +118,13 @@ const Header = () => {
         </nav>
 
         {/* <!-- 2 - Intro Section header--> */}
-        <Grid container sm={12} md={12} lg={12} style={{ padding: "1%" }}>
+        <Grid
+          container
+          sm={12}
+          md={12}
+          lg={12}
+          style={{ padding: "2%", paddingBottom: "7%" }}
+        >
           {/* gridTexts */}
 
           <Grid
@@ -135,7 +137,6 @@ const Header = () => {
             <div style={{ marginTop: 120, width: "95%" }}>
               <h1
                 style={{
-                  fontFamily: MontserratFam,
                   fontWeight: "700",
                   color: COLORS.BLUE_BODY_DEFAULT,
                 }}
@@ -173,14 +174,13 @@ const Header = () => {
             lg={6}
             style={{
               justifyContent: "center",
-              alignSelf: "center",
+              alignSelf: "end",
             }}
           >
-            <CleanWorld
-              style={{
-                height: "100%",
-                width: "100%",
-              }}
+            <img
+              style={{ height: "100%", width: "100%" }}
+              src="/assets/img/svgs/CleanEnergyWorld.svg"
+              alt="Clean World"
             />
           </Grid>
         </Grid>
@@ -216,17 +216,14 @@ const Header = () => {
               alignItems={"end"}
               justifyContent={"center"}
             >
-              <WomanAndEnergy
+              <img
                 style={{
                   height: "90%",
                   width: "90%",
                 }}
+                src="/assets/img/svgs/WomanAndEnergyCity.svg"
+                alt="Take care of the world!"
               />
-              {/* <img
-                className="img-fluid"
-                src="/assets/img/futureLab.png"
-                alt="mao"
-              /> */}
             </Grid>
 
             {/* Components */}
@@ -254,7 +251,6 @@ const Header = () => {
                   style={{
                     width: "100%",
 
-                    fontFamily: MontserratFam,
                     fontWeight: "700",
                     color: COLORS.BLUE_BODY_DEFAULT,
                   }}
