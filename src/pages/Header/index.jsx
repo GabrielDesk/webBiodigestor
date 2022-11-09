@@ -234,7 +234,7 @@ const Header = () => {
                   width: "90%",
                 }}
                 // src="/assets/img/svgs/CleanEnergyWorld.svg"
-                src="/assets/img/svgs/WomanAndEnergyCity.svg"
+                src="/assets/img/svgs/EnergyCity.svg"
                 alt="Take care of the world!"
               />
             </Grid>
