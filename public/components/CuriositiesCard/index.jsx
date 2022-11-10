@@ -18,7 +18,7 @@ const CuriositiesCard = ({ Item = {} }) => {
       <div
         style={{
           width: "100vw",
-          height: 370,
+          height: 380,
           backgroundColor: COLORS.WHITE_DEFAULT,
           boxShadow: "2px 2px 2px #fff",
           borderRadius: 10,
@@ -85,7 +85,7 @@ const CuriositiesCard = ({ Item = {} }) => {
           >
             <p
               style={{
-                fontSize: 14,
+                fontSize: 16,
                 color: "#91878f",
                 overflow: "hidden",
                 textOverflow: "ellipsis",

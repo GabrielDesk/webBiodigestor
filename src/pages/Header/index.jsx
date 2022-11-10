@@ -466,7 +466,7 @@ const Header = () => {
               <p
                 style={{
                   fontSize: 22,
-                  fontWeight: 200,
+                  fontWeight: 700,
                   textAlign: "center",
                   lineHeight: 1.5,
                   color: COLORS.WHITE_DEFAULT,

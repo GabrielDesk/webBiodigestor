@@ -82,7 +82,8 @@ const InformationCard = ({ Item = {} }) => {
           >
             <p
               style={{
-                fontSize: 14,
+                fontSize: 15,
+                fontWeight: 600,
                 color: "#91878f",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
