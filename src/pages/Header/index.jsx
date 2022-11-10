@@ -154,7 +154,7 @@ const Header = () => {
                   textAlign: "justify",
                   fontWeight: 600,
                   lineHeight: 1.8,
-                  fontSize: 18,
+                  fontSize: 20,
                   color: COLORS.SUBTITLE_TEXT_DEFAULT,
                 }}
               >
