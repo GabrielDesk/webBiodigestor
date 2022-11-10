@@ -24,27 +24,27 @@ Principais tipos de Biodigestor: Batelada x Contínuo
 const CarouselInformationObject = {
    InfoContentSlide1:{
     Id: 1,
-    Title: "Qual é a origem do biodigestor:",
-    Subtitle: 'Em 1806, na Inglaterra, Humphry Davy identificou um gás rico em metano e dióxido de carbono, resultado da decomposição de dejetos animais.',
+    Title: "Qual é a origem do biodigestor?",
+    Subtitle: 'Em 1806, na Inglaterra, Humphry Davy identificou um gás rico em metano e dióxido de carbono, resultado da decomposição de dejetos animais, que possivelmente se tornariam energia elétrica.',
     ImageSrc: '/assets/img/inquiryCleanEnergy.jpg'
 
    },
    InfoContentSlide2:{
     Id: 2,
     Title: "De onde vem a energia?",
-    Subtitle: "Na geração de energia do biogás, ocorre a conversão da energia química do gás em energia mecânica por meio de um processo controlado de combustão. Essa energia mecânica ativa um gerador que produz energia elétrica.",
+    Subtitle: "Na geração de energia a partir do biogás, ocorre a conversão da energia química em energia mecânica por meio de um processo controlado de combustão. Essa energia mecânica ativa um gerador que produz energia elétrica.",
     ImageSrc: '/assets/img/recyclingImage.png'
    },
    InfoContentSlide3:{
     Id: 3,
     Title: "Quais são os seus benefícios?",
-    Subtitle: "o reaproveitamento do resíduo orgânico, a produção de fertilizantes e biogás. O biodigestor apresenta como umas das melhores práticas para destinação resíduos orgânicos",
+    Subtitle: "O reaproveitamento do resíduo orgânico, a produção de fertilizantes e biogás. O biodigestor apresenta como umas das melhores práticas para destinação resíduos orgânicos",
     ImageSrc: '/assets/img/analyticsImage.png'
    },
    InfoContentSlide4:{
     Id: 4,
-    Title: "Em que países encontamos um biodigestor?",
-    Subtitle: "Temos biodigestores nos seguintes países Alemanha, China e outros países da Europa, algumas regiões do Brasil, como na cidade de São José dos Campos - SP.",
+    Title: "Em que países encontramos um biodigestor?",
+    Subtitle: "Temos biodigestores nos seguintes países: Alemanha, China e outras regiões da Europa e também em algumas regiões do Brasil, como na cidade de São José dos Campos - SP.",
     ImageSrc: '/assets/img/teacherImage.png'
    },
 };

@@ -39,12 +39,12 @@ const CuriositiesCardObject = {
    Curiositie2:{
     Id: 2,
     Title: "Biodigestor contínuo",
-    Subtitle: "Biodigestores de operação contínua operam com cargas diárias de matéria orgânica que se movimentam por meio de uma carga hidráulica dentro do biodigestor, devendo a matéria orgânica ser diluída antes de ser colocada no biodigestor",
+    Subtitle: "Biodigestores de operação contínua operam com cargas diárias de matéria orgânica que se movimentam por meio de uma carga hidráulica dentro do biodigestor, devendo a matéria orgânica ser diluída antes de ser colocada no biodigestor.",
    },
    Curiositie3:{
     Id: 3,
     Title: "Geração de combustível",
-    Subtitle: 'Você sabia que com 1m³(metro cúbico) de biogás equivale energeticamente a 0,70 litros de gasolina',
+    Subtitle: 'Você sabia que 1m³(metro cúbico) de biogás equivale energeticamente a 0,70 litros de gasolina!',
    },
    Curiositie4:{
     Id: 4,
